@@ -125,7 +125,7 @@ class QuestionViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
 
 class AnswerViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
     """
-    Вариант (Представление)
+    Ответ (Представление)
     """
     pagination_class = StandardResultsSetPagination
     queryset = Answer.objects.all()
