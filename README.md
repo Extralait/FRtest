@@ -26,7 +26,12 @@ docker-compose exec web python manage.py collectstatic
 ***/users/{id}/passed-quiz/{id}*** \
 ***/users/{id}/passed-quiz/{id}/answers*** \
 ***/users/{id}/passed-quiz/{id}/answers/{id}*** \
-Все модели доступны для редактирования, удаления и т.д.
+Все модели доступны для редактирования, удаления и т.д. \
+Для модели теста также есть экстра действие для редактирования текущего пользователя \
+***http://localhost/api/v1/users/me***
+
+
+
 
 ### Модель теста
 ***http://localhost/api/v1/quiz/*** \
@@ -185,7 +190,7 @@ docker-compose exec web python manage.py collectstatic
 }
 ```
 
-Для модели теста также есть экстра действие для ответа на теста \
+Для модели теста также есть экстра действие для ответа на тест \
 ***http://localhost/api/v1/quiz/1/answer/***
 Пример ответа конкретно на этот тест (Цифры в ответах - id choice, ключи - id question)
 ```json
