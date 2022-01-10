@@ -14,7 +14,7 @@ docker-compose exec web python manage.py collectstatic
 
 ### Модель пользователя
 ***http://localhost/api/v1/users/*** \
-Доступна регистрация и авторизация, также доступны вложенные URL
+Доступна регистрация и авторизация, также доступны вложенные URL \
 ***/users/{id}*** \
 ***/users/{id}/created-quiz*** \
 ***/users/{id}/created-quiz/{id}*** \
@@ -35,7 +35,7 @@ docker-compose exec web python manage.py collectstatic
 ***/quiz/{id}/questions*** \
 ***/quiz/{id}/questions{id}*** \
 ***/quiz/{id}/questions{id}/choices*** \
-***/quiz/{id}/questions{id}/choices{id}*** \
+***/quiz/{id}/questions{id}/choices{id}*** 
 
 Создать тест можно с помощью вложенного сериализатора \
 на запись, вот пример json для POST запроса
