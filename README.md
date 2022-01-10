@@ -25,7 +25,7 @@ docker-compose exec web python manage.py collectstatic
 ***/users/{id}/passed-quiz*** \
 ***/users/{id}/passed-quiz/{id}*** \
 ***/users/{id}/passed-quiz/{id}/answers*** \
-***/users/{id}/passed-quiz/{id}/answers*** \
+***/users/{id}/passed-quiz/{id}/answers/{id}*** \
 Все модели доступны для редактирования, удаления и т.д.
 
 ### Модель теста
