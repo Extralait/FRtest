@@ -199,6 +199,7 @@ docker-compose exec web python manage.py collectstatic
     3
   ],
   "5": 8
-}```
+}
+```
 
 Admin-панель могу доделать, если нужно
