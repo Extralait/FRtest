@@ -187,7 +187,7 @@ docker-compose exec web python manage.py collectstatic
 
 Для модели теста также есть экстра действие для ответа на теста \
 ***http://localhost/api/v1/quiz/1/answer/***
-Пример ответа конкретно на этот тест (Цифры в ответах - id choices)
+Пример ответа конкретно на этот тест (Цифры в ответах - id choice, ключи - id question)
 ```json
 {
   "1": "Any text answer",
