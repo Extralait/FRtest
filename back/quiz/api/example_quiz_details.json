@@ -1,0 +1,79 @@
+{
+    "id": 1,
+    "name": "first",
+    "owner": 1,
+    "is_active": true,
+    "start_date": "2022-01-11T00:24:00+03:00",
+    "end_date": "2022-01-29T00:24:00+03:00",
+    "questions": [
+        {
+            "id": 1,
+            "question_text": "First",
+            "question_type": "text",
+            "is_required": false,
+            "choices": []
+        },
+        {
+            "id": 2,
+            "question_text": "First",
+            "question_type": "text",
+            "is_required": false,
+            "choices": []
+        },
+        {
+            "id": 3,
+            "question_text": "First",
+            "question_type": "text",
+            "is_required": false,
+            "choices": []
+        },
+        {
+            "id": 4,
+            "question_text": "First",
+            "question_type": "checkbox",
+            "is_required": false,
+            "choices": [
+                {
+                    "id": 1,
+                    "title": "Первый"
+                },
+                {
+                    "id": 2,
+                    "title": "Второй"
+                },
+                {
+                    "id": 3,
+                    "title": "Третий"
+                },
+                {
+                    "id": 4,
+                    "title": "Четвертый"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "question_text": "First",
+            "question_type": "radio",
+            "is_required": false,
+            "choices": [
+                {
+                    "id": 5,
+                    "title": "Первый"
+                },
+                {
+                    "id": 6,
+                    "title": "Второй"
+                },
+                {
+                    "id": 7,
+                    "title": "Третий"
+                },
+                {
+                    "id": 8,
+                    "title": "Четвертый"
+                }
+            ]
+        }
+    ]
+}

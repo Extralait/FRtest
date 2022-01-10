@@ -1,0 +1,61 @@
+{
+    "name": "First",
+    "is_active": true,
+    "start_date": "2022-01-11T00:24:00+03:00",
+    "end_date": "2022-01-29T00:24:00+03:00",
+    "questions": [
+        {
+            "question_text": "first",
+            "question_type": "text",
+            "is_required": false
+        },
+        {
+            "question_text": "first",
+            "question_type": "text",
+            "is_required": false
+        },
+        {
+            "question_text": "first",
+            "question_type": "text",
+            "is_required": false
+        },
+        {
+            "question_text": "first",
+            "question_type": "checkbox",
+            "is_required": false,
+            "choices": [
+                {
+                    "title": "Первый"
+                },
+                {
+                    "title": "Второй"
+                },
+                {
+                    "title": "Третий"
+                },
+                {
+                    "title": "Четвертый"
+                }
+            ]
+        },
+        {
+            "question_text": "first",
+            "question_type": "radio",
+            "is_required": false,
+            "choices": [
+                {
+                    "title": "Первый"
+                },
+                {
+                    "title": "Второй"
+                },
+                {
+                    "title": "Третий"
+                },
+                {
+                    "title": "Четвертый"
+                }
+            ]
+        }
+    ]
+}

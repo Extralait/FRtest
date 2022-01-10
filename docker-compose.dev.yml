@@ -1,0 +1,81 @@
+# docker-compose.yml
+
+version: "3.7"
+
+services:
+
+  postgres:
+    container_name: postgres
+    hostname: postgres
+    image: postgres:12
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/:Z
+    env_file:
+      - project_config/.env.postgres
+    networks:
+      - main
+    expose:
+      - "5432"
+    restart: always
+
+  pgbackups:
+    container_name: pgbackups
+    hostname: pgbackups
+    image: prodrigestivill/postgres-backup-local
+    volumes:
+      - ./backups:/backups
+    env_file:
+      - project_config/.env.postgres
+    user: postgres:postgres
+    links:
+      - postgres
+    depends_on:
+      - postgres
+    networks:
+      - main
+    restart: always
+
+  web:
+    container_name: web
+    hostname: web
+    build: ./back
+    image: web-image
+    command: sh -c "python manage.py makemigrations&& python manage.py migrate&& python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./back/static:/home/app/web/static
+      - ./back/media:/home/app/web/media
+      - ./back:/home/app/web
+    env_file:
+      - project_config/.env.back
+    depends_on:
+      - postgres
+    networks:
+      - main
+    expose:
+      - "8000"
+    restart: always
+
+  nginx:
+    container_name: nginx
+    hostname: nginx
+    image: nginx:alpine
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./back/static:/home/app/web/static
+      - ./back/media:/home/app/web/media
+    depends_on:
+      - web
+    networks:
+      - main
+    ports:
+      - "80:80"
+    restart: always
+
+networks:
+  main:
+    name: main
+
+volumes:
+  static_volume:
+  media_volume:
+  postgres_data:
